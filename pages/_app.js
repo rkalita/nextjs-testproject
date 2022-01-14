@@ -1,6 +1,6 @@
-import '../styles/global.css'
+import '../styles/global.css';
+import { appWithTranslation } from 'next-i18next';
 
-// This default export is required in a new `pages/_app.js` file.
-export default function MyApp({ Component, pageProps }) {
-    return <Component {...pageProps} />
-}
+const MyApp = ({ Component, pageProps }) => <Component {...pageProps} />;
+
+export default appWithTranslation(MyApp);
